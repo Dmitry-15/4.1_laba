@@ -26,7 +26,6 @@ class Payment:
         self.held_amount = 0
         self.hand_amount = 0
         self.exp = 0
-
         self.accrued_amount()
         self.withheld_amount()
         self.handed_amount()
@@ -46,7 +45,6 @@ class Payment:
         self.percent = float(percent)
         self.worked_days = int(worked_days)
         self.working_day = int(working_day)
-
         self.accrued_amount()
         self.withheld_amount()
         self.handed_amount()
@@ -65,8 +63,8 @@ class Payment:
         self.amount = b * percent
 
     def withheld_amount(self):
-        plata = (self.salary / self.working_day) * self.worked_days
-        self.held_amount = (plata * 0.13) + (plata * 0.01)
+        с = (self.salary / self.working_day) * self.worked_days
+        self.held_amount = (с * 0.13) + (с * 0.01)
 
     def handed_amount(self):
         self.hand_amount = self.amount - self.held_amount

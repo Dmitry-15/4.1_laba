@@ -28,8 +28,8 @@ class Payment:
 
 
 if __name__ == "__main__":
-    newNumber = Payment(28500.5, 25, 30)
-    newNumber.display()
-    newNumber.read()
-    newNumber.summa()
-    newNumber.display()
+    amount = Payment(28500.5, 25, 30)
+    amount.display()
+    amount.read()
+    amount.summa()
+    amount.display()
