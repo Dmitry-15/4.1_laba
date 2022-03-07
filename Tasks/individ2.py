@@ -56,19 +56,23 @@ class Payment:
         print(f"Сумма выданная на руки: {round(self.hand_amount)} руб.")
         print(f"Трудовой стаж: {self.exp} лет")
 
+    # Вычисление начисленной суммы
     def accrued_amount(self):
         a = self.salary / self.working_day
         b = a * self.worked_days
         percent = self.percent / 100 + 1
         self.amount = b * percent
 
+    # Вычисление удержанной суммы
     def withheld_amount(self):
         с = (self.salary / self.working_day) * self.worked_days
         self.held_amount = (с * 0.13) + (с * 0.01)
 
+    # Вычисление суммы выданной на руки
     def handed_amount(self):
         self.hand_amount = self.amount - self.held_amount
 
+    # Вычисление трудового стажа
     def experience(self):
         self.exp = 2022 - self.year
 
